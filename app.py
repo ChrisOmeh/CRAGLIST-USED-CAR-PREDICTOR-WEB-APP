@@ -1,4 +1,4 @@
-from . import create_app
+from USEDCARS import create_app
 
 app = create_app()
 
