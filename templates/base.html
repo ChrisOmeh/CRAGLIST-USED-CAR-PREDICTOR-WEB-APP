@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% block head%}   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Compiled and minified CSS 
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheet/main.css') }}">
+    -->
+    
+     <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <title>CAR PREDICTOR</title>
+ 
+   
+    <style>
+        body {
+            background-color: lightblue;
+            width: 1200px;
+            line-height: normal;}
+        ul {list-style-type: none;
+                margin: 10px;
+                padding: 10px;
+                overflow: hidden;
+                background-color: #333333;
+}
+
+        li {
+                float: left;
+                }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-right: 20px;
+            margin-left: 20px;
+            text-decoration: none;
+            
+            }
+
+        li a:hover {
+            background-color: #111111;
+                }
+        .page-footer{text-align: center;
+                     color: green;
+                    text-decoration-color: green;}    
+        h1 {text-align: center;
+            text-decoration-color: green;} 
+            
+        .header-group{text-align: center;}
+        .form-group{text-align: justify;}
+        .page-footer, h3{text-align: center;
+                            text-decoration-color: green; } 
+        img {float: right;
+            padding: auto;
+            margin-left: 5px;
+            }    
+        main {text-align: center;}     
+
+    </style>
+{% endblock %}     
+</head>
+
+<body>
+<!--THE HEADER SECTION FOR ALL HEADINGS-->
+    <header>
+        <ul>
+            <li><a href="{{ url_for('main.index') }}" role="button">Home</a></li>
+            <li><a href="{{ url_for('auth.signup') }}" role="button">Sign Up</a></li>
+            <li><a href="{{ url_for('auth.login') }}" role="button">login</a></li>
+            <li><a href="{{ url_for('main.profile') }}" role="button">Profile</a></li>
+            <li><a href="{{ url_for('auth.logout') }}" role="button">logout</a></li>
+          </ul>
+
+        <section class="header-group" style="text-align: center;">
+            <h1><a href="https://github.com/ChrisOmeh/g05-used-cars" target="_blank" class="brand-logo"><strong style="color: green;"> CAR PRICE PREDICTOR</strong></a></h1>
+        </section>
+    
+        <!--IMAGES-->
+        <p></p><img src="static/images/car1.jpeg" height="100px"
+        width="200px" border='2px' alt="car"/>
+        A used car, a pre-owned vehicle, or a secondhand car, is a vehicle that has previously had one or more retail owners. 
+        Used cars are sold through a variety of outlets, including franchise and independent car dealers, rental car companies, buy here pay here dealerships, leasing offices, auctions, and private party sales. 
+        Some car retailers offer "no-haggle prices," "certified" used cars, and extended service plans or warranties. 
+        </p>
+    </header>
+{% block content %} {% endblock %}    
+</body>
+</html>

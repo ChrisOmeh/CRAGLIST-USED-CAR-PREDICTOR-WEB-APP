@@ -1,0 +1,141 @@
+{% extends "base.html" %} {% block head %} {{ super() }}  
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Compiled and minified CSS 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheet/main.css') }}">
+    -->    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title> USED CAR PREDICTOR</title>
+
+    <style>
+        body {
+            background-color: lightblue;
+            flex-direction: column;
+            width: 1200px;}
+
+        .header-group{text-align: center;}
+        .form-group{text-align: justify;}
+        .page-footer, h3{text-align: center;
+                        text-decoration-color: green; } 
+        img {float: right;
+            padding: auto;
+            margin-left: 5px;
+            }      
+
+    </style>
+ {% endblock %} {% block content %}       
+</head>
+<body>
+    <!--THE MAIN CONTAINS THE ACTUAL WEB CONTENTS-->
+    <main>
+        <h3 style="text-align: center; color: green;">CHOOSE THE USED CAR DETAILS</h3>
+        <section class="form-group">
+            <form action="/login" method="POST">
+
+                <!--REGION OF USED CAR-->
+                <label><strong>CAR REGION</strong></label><br>
+                <input class="region" name="CAR REGION" placeholder="Enter used car region" type="text" required>
+                <br><br>
+
+                <!--USED CAR MANUFACTURER-->
+                <label><strong>CAR MANUFACTURER</strong></label><br>
+                <input class="car-manufacturer" name="CAR MANUFACTURER" placeholder="Enter used car manufacturer" type="text" required>
+                <br><br>
+
+                <!--USED CAR MODEL-->
+                <label><strong>CAR MODEL</strong></label><br>
+                <input class="car-model" type="text" name="CAR MODEL" placeholder="Enter used car model" required>
+                <br><br>
+
+                <!--USED CAR NUMBER OF CYLINDERS-->
+                <label><strong>CAR NUMBER OF CYLINDERS</strong></label><br>
+                <input class="number-cylinders" type="number" name="CAR NUMBER OF CYLINDERS" required>
+                <br><br>
+
+                <!--USED CAR STATUS-->
+                <label><strong>CAR STATUS</strong></label><br>
+                <input class="car-status" type="text" name="CAR STATUS" placeholder="Enter used car status" required>
+                <br><br>
+
+                <!--USED CAR US STATE-->
+                <label><strong>CAR US STATE</strong></label><br>
+                <input class="car-state" type="text" name="CAR US STATE" placeholder="Enter Used Car US State" required>
+                <br><br>
+
+                <!--USED CAR FUEL TYPE-->
+                <label><strong>CAR FUEL TYPE</strong></label><br>
+                <select name="CAR FUEL TYPE" multiple>
+                    <option value="electric">electric</option>
+                    <option value="hybrid">hybrid</option>
+                    <option value="other">other</option>
+                    <option value="diesel">diesel</option>
+                    <option value="gas">gas</option>
+                </select>
+                <br><br>
+
+                <!--USED CAR TRANSMISSION MODE-->
+                <label><strong>CAR TRANSMISSION</strong></label><br>
+                <select name="CAR TRANSMISSION" multiple>
+                    <option value="manual">manual</option>
+                    <option value="automatic">automatic</option>
+                    <option value="other">other</option>
+                </select>
+                <br><br>
+
+                <!--USED CAR TYPE-->
+                <label><strong>CAR TYPE</strong></label><br>
+                <select name="CAR TYPE" multiple>
+                    <option value="sedan">sedan</option>
+                    <option value="SUV">SUV</option>
+                    <option value="pickup">pickup</option>
+                    <option value="truck">truck</option>
+                    <option value="other">other</option>
+                    <option value="wagon">wagon</option>
+                    <option value="coupe">coupe</option>
+                    <option value="hatchback">hatchback</option>
+                    <option value="van">van</option>
+                    <option value="mini-van">mini-van</option>
+                    <option value="convertible">convertible</option>
+                    <option value="bus">bus</option>
+                    <option value="offroad">offroad</option>
+                </select>
+                <br><br>
+
+                <!--USED CAR COLOUR-->
+                <label><strong>CAR COLOUR</strong></label><br>
+                <select name="CAR COLOUR" multiple>
+                    <option value="white">white</option>
+                    <option value="black">black</option>
+                    <option value="grey">grey</option>
+                    <option value="blue">blue</option>
+                    <option value="silver">silver</option>
+                    <option value="red">red</option>
+                    <option value="custom">custom</option>
+                    <option value="green">green</option>
+                    <option value="brown">brown</option>
+                    <option value="yellow">yellow</option>
+                    <option value="orange">orange</option>
+                    <option value="purple">purple</option>
+                </select>
+                <br><br>
+            
+                <!--SUBMIT BUTTON-->
+                <input type="submit" onclick="Thanks" name="SUBMIT" value="Submit"/>     
+            </form>
+        </section>
+    </main>
+
+    <!--THE FOOTER SECTION CONTAINS EVERY CONTENT THAT APPEARS AT BUTTOM OF THE WEB-->
+    <footer style="color: green;">
+        <section class="page-footer" style="text-align: center;">
+            <div>
+                © 2020 Group G-05 Hamoye Open Source Project
+            </div>
+        </section>
+    </footer>
+
+</body>
+</html>
+{% endblock %}
